@@ -1,0 +1,18 @@
+# Zugangsdaten - NIEMALS committen
+.env
+
+# Ausgabe/JSON-Dumps
+*.json
+noten.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env.*
+!.env.example
+
+# Editor / lokale Einstellungen
+.vscode/
+.idea/
