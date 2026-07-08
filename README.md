@@ -340,6 +340,51 @@ Credits im deutschen Format (`"2,1"`). Für Rechnungen `,` → `.` ersetzen und 
 
 ---
 
+## Abkürzungen (Statuscodes & Modultypen)
+
+Quelle: die „Erläuterungen" im HISinOne/QIS-Notenspiegel. Genau diese Kürzel
+stehen in den Feldern `status` und `art` – und werden zusätzlich unter
+`legende` direkt im JSON mitgeliefert.
+
+**Prüfungsstatus (Feld `status`)**
+
+| Code | Bedeutung |
+|------|-----------|
+| `AN` | angemeldet |
+| `BE` | bestanden |
+| `NB` | nicht bestanden |
+| `EN` | endgültig nicht bestanden |
+| `AB` | abgemeldet |
+| `KR` | Krankmeldung |
+| `GR` | genehmigter Rücktritt |
+| `NGR` | nicht genehmigter Rücktritt |
+| `NE` | nicht erschienen |
+| `RT` | abgemeldet über Online-Selbstbedienung |
+| `ME` | mündl. Ergänzungsprüfung |
+| `VZ` | Verzicht auf Wiederholung |
+| `TA` | Täuschungsversuch |
+| `PV` | Konto/Modul nicht vollständig |
+| `FAE` | fristgerechte Arbeitsabgabe erfolgt |
+
+**Modultyp (Feld `art`)**
+
+| Code | Bedeutung |
+|------|-----------|
+| `GE` | Modul |
+| `PL` | Teilmodul |
+| `MB` | Modul Bachelorarbeit |
+| `MM` | Modul Masterarbeit |
+| `AA` | Abschlussarbeit (Bachelor od. Master) |
+
+**Semester**
+
+| Code | Bedeutung |
+|------|-----------|
+| `SoSe` | Sommersemester |
+| `WiSe` | Wintersemester |
+
+---
+
 ## Wie es funktioniert
 
 Moderne HISinOne-Installationen zeigen die Noten teils nicht mehr im neuen
