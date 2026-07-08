@@ -28,7 +28,7 @@ Frontend, sondern nur im Legacy-QIS (hier ``icms``). Der Weg dorthin:
    Token-Login aushebeln).
 4. Ueber das POS-Menue die ``asi`` (Anwendungs-Session-Id) einsammeln.
 5. Notenspiegel-Baum initialisieren (``tree.vm``) und die Liste (``list.vm``)
-   abrufen. Die Seiten sind ISO-8859-1 (Latin-1) kodiert.
+   abrufen. Die Seite ist UTF-8 kodiert (wichtig fuer Umlaute in der Legende).
 
 Benutzung
 ---------
@@ -218,7 +218,7 @@ class HISinOneClient:
                     f"&nodeID={self.node_id}&expand=0&asi={asi}", timeout=self.timeout,
                     headers={"Referer": f"{self.icms_url}/rds?state=notenspiegelStudent"
                              f"&next=tree.vm&asi={asi}"})
-        lst.encoding = "ISO-8859-1"  # klassische QIS ist Latin-1
+        lst.encoding = "utf-8"  # QIS-Seite ist UTF-8 (Umlaute in der Legende)
         low = lst.text.lower()
         if "notenspiegel" in low or "<table" in low:
             return lst.text
